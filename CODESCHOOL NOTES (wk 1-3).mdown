@@ -1,0 +1,144 @@
+CODESCHOOL NOTES
+
+Questions: 
+so … is url(filename.jpg) a function? 
+
+color image position repeat
+
+Doctype 
+Meta declaration: <meta charset=“UTF-8”>
+
+Script tag 
+<script src=“file.js”...  (no type)>
+
+Link tag also doesn’t need type
+
+i b em strong - no longer style declarations. 
+HTML5: i “alternate voice or mood” 
+b: “stylistically offset” 
+em: “stress emphasis” 
+strong: “strong importance” 
+
+Elements: 
+section element represents a generic document or application section. 
+Difference with div: groups together thematically related content. “Is all of the content related?” —> section
+
+Document outline: Article, aside, nav, section
+Within a section, can redefine headers. 
+
+Header: can be multiple. Defined by content rather than position. Can have a header for any given section. 
+
+Footer: similar to header. Content-based. 
+
+Aside: “tangentially related” e.g. a sidebar. 
+
+Nav intended “for major navigation”
+
+Article is another type of section — self-contained related content
+good for syndicated contact
+
+Main either directly relates to or expands upon the central topic of the page. Main must be external and cannot be more than one per page
+
+Fig/figcaptre If removed from the doc, won’t affect the meaning. Caption or legend for figure = figcaption. 
+<figure> 
+	<img src =…> 
+	<figcapture></figcapture>
+</figure> 
+
+<time daetime=“YYYY-MM-DD”>September 16, 2013</time>
+
+
+‘Semantic” is a goal of HTML5 updates 
+
+New inputs: search
+<input type = “search” /> 
+="email"
+=“date”
+=“tel’
+=“number”
+=“range” - slider, imprecise number
+=“month”
+=“week”
+=“time”
+=“datetime-local” (local = no time zone association) 
+=“color” (color picker) 
+=“datalist”
+id = “browser”….
+option = …
+
+placehoder 
+autofocus - just add to the input
+required - just add to the input
+pattern - attribute accepts a JS regular expression to check against. 
+
+.box {
+border-top-right-radius: XXpx
+border-radius: XXpx
+border-radius: top right bottom left
+border-radius can also take percentages: 50% = oval/circle 
+
+
+box shadow: 1px 2px 2px #000
+: <inset [default absent]> <offset-x> <offset-y> <blur-radius> <spread-radius> <blur-radius [can omit, but need to set to 0 if spread radius >0]> <spead-radius> <color>
+can use comma to 
+.box {
+	box-shadow: …, 
+	…
+}
+text-shadow works similarly, no spread-radius
+box-sizing property: allows you to set how much of the box model the width: property applies to. border-box, content-box, padding-box
+
+background: 
+	url(bg1.png) top left no-repeat, 
+	url(bg2png) bottom right no-repeat;
+color: rgba(0, 0, 0, 0.75);
+(also hsla)
+linear-gradient:(<angle>, to <side-or-corner>, <color-stops>)
+: to top -> 0deg
+to bottom -> 180deg
+to left-> 90
+to right -> 270
+bg: linear-gradient(to bottom, red, yellow)
+bg: radial-gradient(<shape circle or elipsis> <size> at position, <color-stop>)
+closest-side
+closest-corner
+farthest-side
+farthest-corner
+
+there is no skew, only skewX and skewY
+transform: skewX(<ax>) 
+
+element {
+	transition: background-color 0.2s ease-in-out;
+}
+element:hover {
+	background-color: blue; 
+}
+transition: <property> <duration> <timing-function> <delay>
+ease, ease-in, ease-in-out, linear, cubic-bezier, step-start, step-end, steps()
+
+transition-property: bg-color;
+transition-duracion: 
+transition-timing-function: 
+“all” keyword (as property) applies transition to all in element
+
+@font-face http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font
+
+JAVASCRIPT ROAD TRIP 2
+console.log(“String to print”)
+
+while(contition){
+…
+}
+
+for (*start with this*; *loop if expression=true*; perform code}
+
+for ( var trainNumber = 1; trainNumber <= trainsOperational; trainNumber++) {
+…
+}
+if (contition) {
+
+} else {
+code 
+}
+

@@ -1,0 +1,31 @@
+Map method will always take in a function as a paramater, whether a function expression or one stored in a variable, and return a new array with the results. 
+
+Unshift() and shift() are basically the same as push() and pop(), only, at the other end of the array.
+
+var applyAndEmpty = function (inputNumber, queueOfFunctions) {
+ for (; queueOfFunctions.length > 0;) {
+   inputNumber = queueOfFunctions.shift()(inputNumber); 
+ }
+ return inputNumber;
+};
+  	
+alert(applyAndEmpty(start, puzzlers));
+
+hidden = mystery(3) = 
+function mustery2(multiplier) {
+	multiplier *= 5;
+	return 4 * multiplier;
+}
+
+jumble = mystery3(hidden) = 
+function mystery4(bonus) {
+	return hidden(6) + bonus;
+}
+
+jumble(2) = mystery4(bonus = 2) {
+	return hidden(6) + 2;
+}
+
+hidden(6) + 2 = mystery2(6)
+multiplier = 6 * 5 = 30
+return 4 * 30 = 120
