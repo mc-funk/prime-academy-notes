@@ -1,4 +1,4 @@
-var student = {
+var michelle = {
 	name: Michelle,
 	surname: Funk,
 	mbti: {ei: "I", sn: "N", tf: "T", jp: "J"},
