@@ -1,0 +1,34 @@
+Object.prototype.isPrototypeOf(shoe); = boolean ( = true)
+
+Looks all the way upward through the prototype chain to seee whether the Object.prototype Object is a prototypical "ancestor" of (item)
+
+var tree = {age: underined. location: undefined, type: undefined}
+var elm = Object.create(tree);
+
+Determine properties of class = set of Objects that share and inherit from the same basic prototype. 
+
+A constructor is built with all properties of the entire class
+
+**Capitalizing the variable in JS distinguishes it as a maker of an entire class of objects. 
+
+Function Shoe (shoeSize, shoeColor, forGender, constructStyle) {
+	this.size = shoeSize;
+	this.color = shoeColor; 
+	this.gender = forGender;
+	this.construction = constructStyle;
+	this.putOn = function () {alert("Shoe's on!")};
+
+}
+
+**var beachShoe = new Shoe(10, "blue", "women", "flipflop");
+**beachShoe.putOn();
+
+... This time, with inheritance! 
+
+set a constructor's protoype property: 
+Shoe.prototype = {
+	feed: function () {alert("Thank you!";)}
+	water: function () {alert("Yay water!");}
+}
+
+beachShoe.hasOwnProperty("construction");
