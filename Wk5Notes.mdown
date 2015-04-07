@@ -11,7 +11,7 @@ A constructor is built with all properties of the entire class
 
 **Capitalizing the variable in JS distinguishes it as a maker of an entire class of objects. 
 
-Function Shoe (shoeSize, shoeColor, forGender, constructStyle) {
+function Shoe (shoeSize, shoeColor, forGender, constructStyle) {
 	this.size = shoeSize;
 	this.color = shoeColor; 
 	this.gender = forGender;
@@ -27,8 +27,46 @@ Function Shoe (shoeSize, shoeColor, forGender, constructStyle) {
 
 set a constructor's protoype property: 
 Shoe.prototype = {
-	feed: function () {alert("Thank you!";)}
+	feed: function () {alert("Thank you!";)},
 	water: function () {alert("Yay water!");}
 }
 
 beachShoe.hasOwnProperty("construction");
+
+--
+Accessing 
+
+Tornado.prototype.toString = function() {
+	//desired "toString" functionality.
+	//This seems like it would only really be useful in 
+	//situations where a function or other part of the code 
+	//called "toString" for multiple objects, and we wanted to 
+	//ensure the desired behavior.
+}
+
+Finding constructor & prototype: 
+
+twiter.constructor;
+//returns entire text of constructor function (cool!)
+
+twitter.constructor.prototype;
+//return Object {valueOf: function, toString: function}
+//Not sure what this is returning?? 
+//"Remember that if a prototype Object is defined for a specific class, it will always be a property of the class's constrution, which is just another function Object."
+//can also use twitster.__proto__;
+
+Object.prototype.findOwnerOfProperty = function ( propName ) {
+	var currentObject = this;
+	while (currentObject != null) {
+		if (currentObject.hasOwnProperty(propName)) {
+			return currentObject;
+		} else {
+			currentObject = currentObject.__proto__;
+			}			
+	}
+	return "No property found!";
+}
+
+Javascript Kit
+http://www.smashingmagazine.com/2009/02/08/50-extremely-useful-javascript-tools/
+scripterlative.com
