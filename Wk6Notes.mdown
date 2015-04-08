@@ -80,16 +80,72 @@ git rebase --continue when problem resolved
 git rebase --skip
 git rebase --abort
 
-Really going to need to review to understand differences among merge, fetch/rebase, push/pull and when to use it
+//Really going to need to review to understand differences among merge, fetch/rebase, push/pull and when to use it
 
-Definitely having a hard time keeping track of why we are referencing what at what times
+//Definitely having a hard time keeping track of why we are referencing what at what times
 
-Improving log outlit
+//Improving log outlput
 git config --global color.ui true
+//highlights commit number
 git log 
-git log --pertty=oneline
-git log --protty=format: "%h..."
-git log --oneline -p
-(lines added/removed)
-git log --oneline --stat
+git log --pretty=oneline
+git log --pretty=format: "%h..."
+// %ad = author date; %an = author name; %%h = SHA hash; %s = subject; %d = ref names
 
+git log --oneline -p
+//patch output ("see both log and diff")
+//(lines added/removed)
+
+
+git log --oneline --stat
+//how many insert/del made for each file in commit
+
+git log --oneline --graph 
+//visual representation 
+
+//Specify a date range 
+git log --until=1.minute.ago
+git log --since=1.day.ago
+git log --since=1.hour.ago
+git log --since=1.month.ago --until=2.weeks.ago
+git log --since=2000-01-01 --until=2012-12-21
+
+git diff HEAD 
+//same as git diff
+
+git diff HEAD^
+//parent of last commit
+
+git diff HEAD^^
+//grandparent of last commit
+
+git diff HEAD^..HEAD
+//second most recent commit vs. most recent
+//can also use .. to compare 2 commits by SHA or branch 
+//can also use two branches without ..
+git diff HEAD^^
+//apparently this is the correct way to compare to the grandparent of the latest commit
+
+git blame 
+//who, when changes made
+
+git/info/exclude 
+//folder to include stuff
+
+.gitignore
+//this is a txt file you edit to tell git what to ignore
+logs/*.log
+//insert this into gitignore to tell to ignore all .log files in dir logs
+
+git rm normal.file
+
+git rm --cached developmet.log
+//won't delete from file system, but stop tracking
+
+git config user.email 'user@user.com'
+
+git config --global alias.mylog command
+
+git config --global alias.lol command
+
+git mylog
