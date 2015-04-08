@@ -1,0 +1,95 @@
+explain to elderly 
+
+git reset --soft HEAD^
+//everything in the commit 1 before current head and reset it into staging. 
+
+git commit --amend -m "Modify readme & addtodo.text"
+
+git reset --hard HEAD^ 
+//completely undo commit
+
+git reset --hard HEAD^^
+//delete last 2 commits befor the current head 
+
+git checkout -- cats.html index.html 
+//need to review checkout syntax
+
+git remote ad origin [link]
+
+git remove -v
+//show remote repositories 
+
+git push -u origin master
+//will ask for username/pw
+
+git pull 
+
+git remote add <name> <address>
+git remote rm <name> 
+git push -u <name> <branch>
+
+git clone <url> <name> 
+git remote -v 
+//displays origin <link> 
+
+git checkout cat
+//move to master; git merge <branch name>
+//fast-forward merge (when only branch has new commits)
+
+git checkout -b "octopus"
+//create the branch and checkout
+
+git pull merges origin/master with master. 
+//recursive merge 
+
+commit -a without message after being prompted to resolve conflict in a given file
+
+git push origin <branch name> 
+git remote show origin 
+//shows local and remote branches, out of date or otherwise
+git push origin :<branch name> 
+//deletes remote branch
+//will alert you if there are commits that haven't been pushed up 
+git branch -d shopping_cart
+//delete local copy
+git remote prune origin 
+//remove stale references
+git push <remote name> <local branch name>:<remote branch name>
+//when local and remote branch names don't match
+git push origin :weasel
+git tag 
+//get version number
+
+git tag 
+git checkout v0.0.1
+git tag -a v0.0.3 -m "version 0.0.3"
+git push --tags
+
+
+Rebase
+//fetch: pulls down any changes without merging 
+//rebase: move changes to master which are not in origin/master, run all origin/master commits, run all commits in the temporary area. No merge
+//rebase from merge w
+git checkout master 
+//Switched 
+git merge <branch name>
+
+git rebase master
+
+git rebase --continue when problem resolved 
+git rebase --skip
+git rebase --abort
+
+Really going to need to review to understand differences among merge, fetch/rebase, push/pull and when to use it
+
+Definitely having a hard time keeping track of why we are referencing what at what times
+
+Improving log outlit
+git config --global color.ui true
+git log 
+git log --pertty=oneline
+git log --protty=format: "%h..."
+git log --oneline -p
+(lines added/removed)
+git log --oneline --stat
+
