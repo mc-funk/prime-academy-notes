@@ -1,0 +1,21 @@
+Prime Agenda (4/13)
+- no computers 
+- go through sheet of printed code and explain each step of the way 
+- each team member should be able to articulate each part 
+
+Read, write, speak
+
+HTML review: 
+meta (in <head>): make website more searchable, declare charset 
+
+script tag 
+link tag in head 
+--> similar but different? 
+
+script tag: put at the bottom of the page so it doesn't prevent access to body 
+
+look  up data types re: arrays
+
+Javascript will parse string numbers into numbers when COMPARING (==) but nothing else. "Type Coersion"
+
+

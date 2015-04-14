@@ -16,7 +16,8 @@ Link tag also doesn’t need type
 i b em strong - no longer style declarations. 
 HTML5: i “alternate voice or mood” 
 b: “stylistically offset” 
-em: “stress emphasis” 
+o9
+
 strong: “strong importance” 
 
 Elements: 
