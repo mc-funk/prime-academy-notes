@@ -1,3 +1,5 @@
+##DAY 1
+###Morning exercise
 Prime Agenda (4/13)
 - no computers 
 - go through sheet of printed code and explain each step of the way 
@@ -18,4 +20,162 @@ look  up data types re: arrays
 
 Javascript will parse string numbers into numbers when COMPARING (==) but nothing else. "Type Coersion"
 
+There is a "gotcha" - an assignment in a conditional will always evaluate as true
+
+|| "Double Pipe" */
+
+```JavaScript
+if(!scottsNumber) {
+	scottsNumber = "Hi there"; 
+}
+```
+
+Review hoisting notes? 
+
+_Is using 'return' without something to return a viable way to terminate a function within a conditional, or does that need to be done with an if else?_ <-- yes, it is correct and needed to do this sometimes. 
+
+##DAY 2 4/14
+###LECTURE ONE
+Arrays are a list of information stored in a variable. 
+
+```JavaScript
+var scottsArray = [6,7,8]
+var scottsArray[9]
+```
+
+push, pop - pop things off back of the array, push to back of the array
+shift, unshift - front of the array, must shift index
+
+
+NaN - error when system is given something NaN to treat as a number (math operation)
+undefined - not a variable that has been defined (initialized only) <--- ????? true? 
+
+**Using a stylesheet - reminder**
+```html
+<link href = "filename/hi.css" rel="stylesheet">
+		<link href = "stylesheet.css" rel="stylesheet">
+```
+href in this case used instead of src b/c of "industry standard"
+
+```JavaScript
+console.log[] = //a Statement 
+```
+
+can establish var i outside of for loops to save memory
+
+Infinite loop example (script414.js) - wait, how would we solve this? 
+
+###functions 
+```JavaScript
+function areaOne(width,height) {
+	return width * height;
+	}
+
+var areaTwo = function(width,height) {
+	return width * height;
+};
+```
+
+both anonymous functions and other functions are called the same thing. 
+```JavaScript
+areaOne(x,y);
+areaTwo(x,y);
+```
+
+what is the mysterious callbacK? 
+
+```JavaScript
+variable.toString();
+variable.parseInt();
+variable.charAt(2); 
+```
+
+###LECTURE TWO, DAY TWO 4/14
+sourcetree - visual representation of git
+gt init
+
+Working zone
+Add to staging 
+Commit to index
+Push to server
+
+-In Class Example
+--.git 
+--index.html
+--stylesheet.css
+--app.js
+
+##DAY 3
+###morning lecture
+- lecture
+- toastmasters 
+- big group project (business problem)
+- daily challenge - debugging
+
+MVC - not all development is so nicely organized. 
+Nerdery developed a MVC format 
+- advantages: forces you to think about where your code is and what it's doing 
+- separation of concerns 
+
+CSS/HTML/etc
+- use ids for more interactive elements, class for less interactive 
+
+DOM is a programming interface (API) for html and well-formed xml documents. It provides a structured representation of the document (a tree) and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content.
+
+HTML 4-14.html 
+```JavaScript
+document.getElementById("sweetID")
+var x = 
+"a function of the Element class in Javascript"
+```
+CSS reminder: 
+```css
+p {
+	color: #ff94b3	
+}
+}
+```
+
+switch case 
+```JavaScript
+var x = 1; 
+
+function inputFired(event) {
+	switch(event.keyCode) {
+		case "up": //if (x) = "cat"
+			movePlayerUp();
+			break;
+		case "down": //like "mouse"
+			movePlayerDown();
+			break;
+		case "spacebar": //liek "arrow"
+			moovePlayerJump();
+			break;
+		}
+
+}
+```
+comma rather than concatenation will preserve data type (console.log output, etc.)
+
+##DAY 3
+###morning lecture 
+JS 4-16.js
+```unix
+###Afternoon lecture
+git fetch + git merge = git pull
+git clone <url> //clone
+
+git branch -r  //display all branches
+git branch //display current 
+
+git checkout -b Joe //create branch (-b) Joe
+```
+
+ ##DAY 5**
+ Learned markup for inserting code! 
+ ```html
+<html lang="en">
+...
+</html>
+```
 

@@ -10,4 +10,5 @@ for (i=0; i<arrayLength; i++) {
 
 for (i=0; i<scottsArray.length; i++) {
 	console.log(scottsArray[i]);
+	console.log(scottsArray[i].charAt(0));
 }
