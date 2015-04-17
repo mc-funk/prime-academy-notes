@@ -185,12 +185,12 @@ Learned markup for inserting code!
 ```JavaScript
 var Scott = {
 	name : "Scott Bromander",//typically the place to start, but not necessarily
+	//name is a reserved keyword in JS8
 	employeeNumber : 24856,//this is a property, or key -- key-value pair
 	salary : 100000, 
 	debt : 500000
 	availableIncome = function () { //function expression
-		return this.salary - this.debt //this is special 
-
+		return this.salary - this.debt //'this' is special 
 	}
 }
 console.log("Scott's rating: " + scott.rating); //key/property : value
@@ -199,5 +199,35 @@ future: instantiation ??
 
 ```JavaScript
 function availableIncome(obj) {
-	Return obj.availableIncome;
+	Return obj.availableIncome - obj.debt;
 }
+
+//This is an example of constructor notation
+var sorry = new Object();
+
+//dynamic property access
+scott.name = "Scott Bromander"; //big potential for problems with creating new typo keys
+
+scott.availableIncome = function() {
+	return this.salary - this.debt;
+}; 
+
+console.log(scott.availableIncome());
+```
+```JavaScript
+function Person(name, employeeNumber, salary, debt) {
+	this.name = name; 
+	this.employeeNumber = employeeNumber;
+	this.salary = salary;
+	this.availableIncome = function() {
+		return this.salary - this.debt;
+	};
+}
+
+var person1 = new Person("Bob", 010301, 30000, 12000);
+var person2 = new Person("Sue", 392412, 14324, 23414);
+///
+
+
+
+
