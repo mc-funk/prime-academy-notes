@@ -172,8 +172,9 @@ git branch //display current
 git checkout -b Joe //create branch (-b) Joe
 ```
 
- ##DAY 5
- Learned markup for inserting code! 
+##DAY 5
+
+Learned markup for inserting code! 
  ```html
 <html lang="en">
 ...
@@ -194,4 +195,9 @@ var Scott = {
 }
 console.log("Scott's rating: " + scott.rating); //key/property : value
 ```
-future: instantiation
+future: instantiation ??
+
+```JavaScript
+function availableIncome(obj) {
+	Return obj.availableIncome;
+}
