@@ -1,6 +1,11 @@
 $(document).ready(function (){
 	alert("Yup, jQuery loaded!");
 	$("#thisId").remove();
+	$("#someId").append("<p id='stuff'>Here is some text</p>");
+
+	//.append()
+	//.after()
+	//.prepend()
 });
 
 //certain CSS operators avialble to JQuery using ""

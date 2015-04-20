@@ -10,7 +10,7 @@ Version numbers/semantic versioning:
 * Major/Minor revisions, patch 2.12.2
 
 Minimized vs. unminimized
-* [http://code.jquery.com/jquery-1.11.2.min.js)](http://code.jquery.com/jquery-1.11.2.min.js)
+* [http://code.jquery.com/jquery-1.11.2.min.js](http://code.jquery.com/jquery-1.11.2.min.js)
 * [http://code.jquery.com/jquery-1.11.2.js](http://code.jquery.com/jquery-1.11.2.js)
 
 When creating end-user-facing pages, use the lowest possible version to support the most browsers. 
@@ -19,7 +19,7 @@ CDN: content delivery network
 * 90% of the time you will not use hosted libraries for a production build
 * Check to see whether you have the lbirary in question; else get from CDN 
  
- Exercise: HTML JQuery 4-20.html, JS JQuery 4-20.js
+ Exercise: [HTML JQuery 4-20.html](HTML JQuery 4-20.html), [JS JQuery 4-20.js)](JS JQuery 4-20.js)
 ```HTML
 	<head>
 		<meta charset="utf=8">
@@ -34,12 +34,20 @@ CDN: content delivery network
 ```JavaScript
 $(document).ready(function (){
 	alert("Yup, jQuery loaded!");
-//document.ready function: runs as soon as page is ready
-//bling notation is a JQuery specific action saying "I'm doing something with JQuery"
-//In order for this to work: document.ready function must work correctly, 
-//document must be ready, jQuery must be installed
+	$("#someId").append("<p id='stuff'>Here is some text</p>");
 });
 ```
+About this JS: 
+* document.ready function: runs as soon as page is ready
+* bling notation is a JQuery specific action saying "I'm doing something with JQuery"
+* In order for this to work: document.ready function must work correctly, 
+* document must be ready, jQuery must be installed
+
+Other jQuery functions: 
+* .append()
+* .after()
+* .prepend()
+
 What to put in the document.ready: 
 * The document.ready would have to contain any function that adds functionality to another object. <--? 
 * Any interactive elements should be there
@@ -47,7 +55,8 @@ What to put in the document.ready:
 
 "Can't recognize $" -- indicates jQuery isn't loading properly
 
-# - declares ID 
-. - declares class
+CSS Reminder: 
+* # - declares ID 
+* . - declares class
 
 
