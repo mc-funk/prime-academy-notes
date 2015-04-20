@@ -19,7 +19,7 @@ CDN: content delivery network
 * 90% of the time you will not use hosted libraries for a production build
 * Check to see whether you have the lbirary in question; else get from CDN 
  
- Exercise: [HTML JQuery 4-20.html](HTML JQuery 4-20.html), [JS JQuery 4-20.js)](JS JQuery 4-20.js)
+ Exercise: [HTML JQuery 4-20.html](HTML JQuery 4-20.html), [JS JQuery 4-20.js]
 ```HTML
 	<head>
 		<meta charset="utf=8">
@@ -44,9 +44,10 @@ About this JS:
 * document must be ready, jQuery must be installed
 
 Other jQuery functions: 
-* .append()
-* .after()
-* .prepend()
+* .append() -
+* .after() -
+* .prepend() -
+* .before() - 
 
 What to put in the document.ready: 
 * The document.ready would have to contain any function that adds functionality to another object. <--? 
