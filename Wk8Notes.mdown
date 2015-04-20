@@ -1,0 +1,23 @@
+#Week 8 - April 20 - 25 
+##DAY ONE
+###morning lecture: JQuery
+
+[JQuery](http://jquery.com/)
+1.x supports older browsers
+2.x more modern techniques
+
+Version numbers/semantic versioning: 
+* Major/Minor revisions 2.12.2
+
+Minimized vs. unminimized
+* [http://code.jquery.com/jquery-1.11.2.min.js)](http://code.jquery.com/jquery-1.11.2.min.js)
+* [http://code.jquery.com/jquery-1.11.2.js](http://code.jquery.com/jquery-1.11.2.js)
+
+When creating end-user-facing pages, use the lowest possible version to support the most browsers. 
+
+CDN: content delivery network 
+* 90% of the time you will not use hosted libraries for a production build
+* Check to see whether you have the lbirary in question; else get from CDN 
+ 
+ Exercise: HTML JQuery 4-20.html, JS JQuery 4-20.js
+ 
