@@ -31,6 +31,7 @@ if(!scottsNumber) {
 ```
 
 Review hoisting notes? 
+console.log();
 
 _Is using 'return' without something to return a viable way to terminate a function within a conditional, or does that need to be done with an if else?_ <-- yes, it is correct and needed to do this sometimes. 
 
@@ -226,7 +227,9 @@ function Person(name, employeeNumber, salary, debt) {
 
 var person1 = new Person("Bob", 010301, 30000, 12000);
 var person2 = new Person("Sue", 392412, 14324, 23414);
-///
+```
+
+
 
 
 
