@@ -7,7 +7,7 @@
 2.x more modern techniques
 
 Version numbers/semantic versioning: 
-* Major/Minor revisions 2.12.2
+* Major/Minor revisions, patch 2.12.2
 
 Minimized vs. unminimized
 * [http://code.jquery.com/jquery-1.11.2.min.js)](http://code.jquery.com/jquery-1.11.2.min.js)
@@ -20,4 +20,34 @@ CDN: content delivery network
 * Check to see whether you have the lbirary in question; else get from CDN 
  
  Exercise: HTML JQuery 4-20.html, JS JQuery 4-20.js
- 
+```HTML
+	<head>
+		<meta charset="utf=8">
+		<title>Test HTML</title>
+		<meta name = "decription" content="Webpage">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Make sure jQuery script comes first, or it won't know what to look for-->
+		<script src="JS JQuery 4-20.js"></script>
+	</head>
+```
+
+```JavaScript
+$(document).ready(function (){
+	alert("Yup, jQuery loaded!");
+//document.ready function: runs as soon as page is ready
+//bling notation is a JQuery specific action saying "I'm doing something with JQuery"
+//In order for this to work: document.ready function must work correctly, 
+//document must be ready, jQuery must be installed
+});
+```
+What to put in the document.ready: 
+* The document.ready would have to contain any function that adds functionality to another object. <--? 
+* Any interactive elements should be there
+* 'Lightening the load' becomes an interst hre 
+
+"Can't recognize $" -- indicates jQuery isn't loading properly
+
+# - declares ID 
+. - declares class
+
+
