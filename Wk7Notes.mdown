@@ -64,7 +64,7 @@ console.log[] = //a Statement
 
 can establish var i outside of for loops to save memory
 
-Infinite loop example (script414.js) - wait, how would we solve this? 
+Infinite loop example [script414.js](script414.js) - wait, how would we solve this? 
 
 ###functions 
 ```JavaScript
@@ -161,7 +161,7 @@ comma rather than concatenation will preserve data type (console.log output, etc
 
 ##DAY 4
 ###morning lecture 
-JS 4-16.js
+[JS 4-16.js](JS 4-16.js)
 ###Afternoon lecture
 ```unix
 git fetch + git merge = git pull
@@ -204,7 +204,7 @@ function availableIncome(obj) {
 }
 
 //This is an example of constructor notation
-var sorry = new Object();
+var sorry = new Person();
 
 //dynamic property access
 scott.name = "Scott Bromander"; //big potential for problems with creating new typo keys
