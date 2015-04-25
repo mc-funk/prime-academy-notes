@@ -75,12 +75,12 @@ todd@trackjs.com - email for 3 months of track.js free!
 * Mutuality
 
 ##Modern JavaScript and Dependency Management for Fancy People 
+[github.com/malchata/requirejs-presentation](github.com/malchata/requirejs-presentation)
 * History of HTML/web development
 * "Give up and use tables"
 * Coding for IE6 compatability: worst thing ever. 
 
 ###Modular javascript
-	[github.com/malchata/requirejs-presentation](github.com/malchata/requirejs-presentation)
 
 * Loading JS as modules: script tags, e.g. jQuery. 
 	* Maybe at production you bundle, but in development we bucket things with separate scripts. 
