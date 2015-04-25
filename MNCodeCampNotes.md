@@ -97,7 +97,7 @@ todd@trackjs.com - email for 3 months of track.js free!
 	* load require.js but not any other scripts
 		* uses an HTML5 attribute called data main to have one access points 
 		* <script src="scripts/require.js" data-main="scripts/app" type=""></script>
-'''JavaScript
+```JavaScript
 //scripts/lib/jquery-stuff.js
 require(["lib/jquery", "lib/modernizr"], function($, Modernizr){
 		$(function() {
@@ -105,13 +105,13 @@ require(["lib/jquery", "lib/modernizr"], function($, Modernizr){
 		});
 });
 //order of data sources in the array = order of dependencies in function scope.
-'''
+```
 
-'''JavaScript
+```JavaScript
 //scripts/lib/app.js
 require(["lib/jquery-stuff.js"]}
 //can have require function point to other scripts with other require functions
-'''
+```
 
 * further abstraction: use define() instead of reqiure()
 	* take same arguments in same order; dependencies, then code
