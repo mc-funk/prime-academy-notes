@@ -75,4 +75,84 @@ $(document).ready(function (){
 
 .closest -- does what??
 
+Assignment: 
+
+Button: Generate Property
+* inserts row (slide down)
+* property ID: 4-digitis
+* property ID: square footage 
+* property ID: price per square foot
+* Remove button
+
+Button: Remove
+* removes row it's on (slide down)
+* prime_peer_jq_02
+
+Hard: 
+* add total cost in another column 
+Pro: 
+* add final column total cost/month
+
+##Day 3
+###Morning Lecture
+[HTML JQuery 4-21.html](HTML JQuery 4-22.html)
+[JQuery 4-21.html](JQuery 4-2.html)
+[jQuery 4-22.css](jQuery 4-22.css)
+
+##Day 4
+###Afternoon Lecture
+[JQuery 4-23.html](JQuery 4-23.html)
+[jQuery 4-23.js](jQuery 4-23.js)
+[jQuery 4-23.css](jQuery 4-23.css)
+
+Use chained jQuery functions, including delay: 
+
+```JavaScript
+$(document).ready(function() {
+	$("#goodbyeW").click(function() { //single quote is more 'javascripty', but "string" is good
+		$("#helloW").slideUp().delay(600).slideDown();
+	});
+	$("#goodbyeN").click(function() { //single quote is more 'javascripty', but "string" is good
+		$("#helloN").slideUp().slideDown();
+	});
+});
+```
+
+Loops can be used: 
+```JavaScript
+	$("#goodbyeW").click(function() {
+		for (var i=0; i<10; i++){
+			$("#helloW").delay(500).slideUp().delay(i*100).slideDown();
+		}
+	});
+```
+
+```JavaScript
+	$('li').click(function() {
+		$(this).toggleClass('selected');
+	});
+	$('#goodbyeW').click(function() {
+		$('li').removeClass('selected');
+	});
+```
+
+python -m simpleHTTPserver
+
+##DAY FIVE
+###Code Review for group project
+script tags on bottom
+
+Using ID and classes: 
+* using ID can get very messed up when the backend is added on 
+* class ="column js-selection"; can reference both individually (css & js)
+	* $('.js-selection')
+	* .column {}
+* using img src vs. background of a div
+* keep numbers "as big as possible" as long as possible; don't round until you're displaying
+* maintain flexibility by using constructors over object literal
+* <p id="Apple" data-fruit="apple"> value of apple is ... ?  Look into wtf data is here
+* $(this).data("fruit")
+
+
+
 
