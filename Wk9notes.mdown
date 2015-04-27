@@ -1,0 +1,97 @@
+##Week Three, Day One
+###morning lecture 
+
+Overengineering vs. making good/simple code 
+
+```html
+<div class="teamSizeButton" id="button2" data-teamsize="2">2</div>; 
+``
+```CSS
+.teamSizeButton, .refresh button { /*no comma would look for latter inside of former*/
+	background-color: #000000;
+}
+```
+```javascript
+$(".teamSizeButton").on("click", function() {
+	groupSize = $(this).data("teamsize"); //this has to be lowercase when you call it
+});
+```
+How to know what to put in the document.ready, or not? 
+//TODO: these are sometimes picked up by where you're writing your code! 
+
+Making lines of jQuery cleaner: 
+```javascript
+var targetParent = $('#group' + count);
+var el = "<p>" + teamList[i] + "</p>";
+
+targetParent.append(el);
+el = targetParent.children().last();
+```
+
+###late morning lecture
+CSS Cross Country - light and fluffy
+
+Display type for div default = inline 
+```CSS
+div {
+	display: block;
+	float: left;
+	margin: 0 20px 0 10px; /*Margin collapsing: space between these will be 20px*/
+}
+```
+Use comma delimited styling to group things that should be consistend. 
+```CSS
+div, p {
+	/*Styling</*
+}
+```
+Cascade order -- top down: defining an element attribute at the same specificity level means the one lower on the page will override the previous one. (Selector specificity will be important here)
+
+Pseudo-classes (selectors?): 
+```CSS
+div:hover { /*Does this have a relationship with js .hover()?*/
+	background-color: #00FF00;
+}
+div:active {
+	background-color: #0000FF;
+}
+```
+Complex selectors
+```css
+#parentDiv div { /*divs within id parentDiv*/
+	width: 100px;
+	height: 100px;
+}
+
+#parentDiv div:nth-child(even) {
+	background-color: #FF0000;
+}
+
+#parentDiv div:nth-child(odd) {
+	background-color: #00FF00;
+}
+```
+(An+B) - 2n+0 = even; 2n+1 = odd;
+Every nth child (where n = A) + starting child (=B)
+
+Exercise: for every other li in <ul><li>Thing 1</li>...</ul>;
+```css
+ul li:nth-child(even) { /*Or li:nth-child(2n+1)*/
+	background-color: #333333;
+}
+```
+
+####Bootstrap
+Effective at spinning up good-looking sites quickly 
+Uses a column system - divides page into 12 columns
+```javascript
+<div class="">	</div>
+```
+Bootstrap: pre-programmed files, functionality
+[demos/Bootstrap 4-27.html](demos/Bootstrap 4-27.html)
+[demos/Bootstrap 4-27.css](demos/Bootstrap 4-27.css)
+[demos/Bootstrap 4-27.css](demos/Bootstrap 4-27.css)
+
+
+
+
