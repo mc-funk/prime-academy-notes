@@ -85,13 +85,72 @@ ul li:nth-child(even) { /*Or li:nth-child(2n+1)*/
 Effective at spinning up good-looking sites quickly 
 Uses a column system - divides page into 12 columns
 ```javascript
-<div class="">	</div>
+<div class=""></div>
 ```
 Bootstrap: pre-programmed files, functionality
-[demos/Bootstrap 4-27.html](demos/Bootstrap 4-27.html)
-[demos/Bootstrap 4-27.css](demos/Bootstrap 4-27.css)
-[demos/Bootstrap 4-27.css](demos/Bootstrap 4-27.css)
+[demos/Bootstrap4-27.html](demos/Bootstrap4-27.html)
+[demos/Bootstrap4-27.css](demos/Bootstrap4-27.css)
+[demos/Bootstrap4-27.css](demos/Bootstrap4-27.css)
 
+```css
+<div class="col-md-4"> /*Special bootstrap class - span 4 columns*/
+```
 
+Columns past 13 will wrap to nearest spot to the top regardless of column
 
+Offset: add in a second class to any element
+```css
+<div class="row"> /*New horizontal grouping of info*/
+	<div class="col-md-3 col-md-offset-1"> /*Special bootstrap class - span 4 columns*/
+	/*All the stuffs*/
+	</div>
+</div>
+```
+
+##WEEK THREE DAY TWO
+###morning tech lecture
+placekitten.com/320/210 <-- gives you a kitten of that size!!
+fillmurray.com similar
+placeholder.it
+
+Adobe Kuler
+[color.adobe.com](color.adobe.com)
+[color.adobe.com/explore](color.adobe.com/explore)
+
+col-xs-1 0px phone
+col-sm-2 768px tablet
+col-md-3 992px laptop
+col-lg-4 1200px desktop
+
+hidden-sm, etc - only impacts specified size
+
+text-left
+text-right
+text-justify
+text-center
+text-nowrap
+
+btn-lg
+btn-sm
+btn-xs
+
+btn-default
+btn-primary
+btn-success
+btn-info
+btn-warning
+btn-danger
+
+css for resizing: 
+```css
+.cat-title img {
+	width: 150px;
+}
+```
+
+###Afternoon lecture
+[http://bootswatch.com](http://bootswatch.com)
+Bootstrap exercise possibilities: 
+* add bootstrap theme to Tues solo assignment
+* add bootstrap theme to fruit assignment
 
