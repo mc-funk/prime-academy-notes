@@ -1,3 +1,13 @@
 .well {
 	background-color: #E3CBAC;
 }
+
+.buttonDiv {
+	display: float;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.navbar-nav li:hover {
+	background-color: #E1E1E1;
+}

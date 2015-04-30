@@ -9,32 +9,90 @@
     <link href="Bootstrap4-27.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 </head>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!--<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>-->
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+      <a class="navbar-brand" href="#">Bizarre Stuff Inc</a>
+      <ul class="nav navbar-nav">
+        <li><a href="http://archaeogeek.github.io/aging_githubtalk/images/nyantocat.gif">Master Nyan Octocat</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Resources <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://www.placekitten.com">Cats</a></li>
+            <li><a href="http://www.fillmurray.com">Bill Murrays</a></li>
+            <li><a href="http://www.lorempixel.com">Slow-loading randoms</a></li>
+            <li class="divider"></li>
+            <li><a href="http://chrisvalleskey.com/fillerama/">Something completely different</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://getbootstrap.com/components/#navbar">Bootstrap Nav Bar Documentation</a></li>
+        <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>-->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <body>
 <div class="container-fluid"> <!--"container-fluid" is a bootstrap-specific class; this will take up width but try to take up the middle -->
 	<h1>Header for Container-Fluid!</h1>
-	<p>Sagittis iaculis biting purr attack, eat enim ut bat jump eat. Rip the couch feed me sleep on your keyboard stretching judging you quis, vestibulum tempus lay down in your way elit pharetra aliquam. Sleep on your face nibh iaculis litter box iaculis, sniff chuf etiam feed me eat the grass. Zzz bibendum rip the couch rhoncus, rip the couch suscipit jump bibendum biting sagittis.</p>
+	<p>The bootstrap classes used in this exercise are: </p>
+	<ul>
+		<li>"img-responsive" - add to img tag to resize as browser window goes from lg to md to sm</li>
+		<li>"text-center" - add to divs, p tags, more?</li>
+		<li>"nav", "navbar-nav", "navbar-brand", and more - use <a href="http://getbootstrap.com/components/#navbar">bootstrap default navbar capabilities</a></li></ul>
 </div>
 <div class="container"><!--"container" is a bootstrap-specific class -->
 <div class="col-md-3 col-lg-4 well">
 	<div>
-		<p class="lead text-right">Cat title</p>
-		<img class="hidden-md" src="http://www.placekitten.com/320/210">
-		<button class="btn-warning btn-lg">Purchase</button>
+		<p class="lead text-center">Cat title</p>
+		<img class="img-responsive" src="http://www.placekitten.com/320/210">
 	</div>
 
 	<h3>Subheader 1 in container</h3>
 	<p>Vel rutrum consectetur chuf, toss the mousie non claw sleep on your keyboard sleep in the sink tempus. Tempus enim ut lick leap zzz hairball, pellentesque fluffy fur judging you tail flick eat the grass stretching. Purr vel vulputate scratched, non eat the grass iaculis pharetra fluffy fur vehicula sunbathe. Elit stuck in a tree attack climb the curtains, purr faucibus puking jump dolor run et suscipit</p>
+	<div class="text-center"><button class="btn-warning btn-lg">Purchase</button></div>
 </div>
 <div class="col-md-3 col-lg-4 well">
-	<div class=""><img class="img-responsive" src="http://www.fillmurray.com/320/210"></div>
+	<p class="lead text-center">Murray title</p>
+	<div><img class="img-responsive" src="http://www.fillmurray.com/320/210"></div>
 	<h3>Subheader 2 in container</h3>
 	<p>Vel rutrum consectetur chuf, toss the mousie non claw sleep on your keyboard sleep in the sink tempus. Tempus enim ut lick leap zzz hairball, pellentesque fluffy fur judging you tail flick eat the grass stretching. Purr vel vulputate scratched, non eat the grass iaculis pharetra fluffy fur vehicula sunbathe. Elit stuck in a tree attack climb the curtains, purr faucibus puking jump dolor run et suscipit</p>
+	<div class="text-center"><button class="btn-warning btn-lg">Purchase</button></div>
 </div>
 <div class="col-md-3 col-lg-4 well">
-	<div class="hidden-md"><img src="http://www.lorempixel.com/320/210"></div>
+	<p class="lead text-center">LoremPixel title</p>
+	<div><img class="img-responsive" src="http://www.lorempixel.com/320/210"></div>
 	<h3>Subheader 3 in container</h3>
 	<p>Vel rutrum consectetur chuf, toss the mousie non claw sleep on your keyboard sleep in the sink tempus. Tempus enim ut lick leap zzz hairball, pellentesque fluffy fur judging you tail flick eat the grass stretching. Purr vel vulputate scratched, non eat the grass iaculis pharetra fluffy fur vehicula sunbathe. Elit stuck in a tree attack climb the curtains, purr faucibus puking jump dolor run et suscipit</p>
+	<div class="text-center"><button class="btn-warning btn-lg">Purchase</button></div>
 </div>
 </div>
 <script src="jquery.min.js"></script>
