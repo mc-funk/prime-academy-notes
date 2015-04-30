@@ -17,7 +17,7 @@ $(".teamSizeButton").on("click", function() {
 });
 ```
 How to know what to put in the document.ready, or not? 
-//TODO: these are sometimes picked up by where you're writing your code! 
+//TODO: these are sometimes picked up by where you're writing your code!
 
 Making lines of jQuery cleaner: 
 ```javascript
@@ -154,3 +154,29 @@ Bootstrap exercise possibilities:
 * add bootstrap theme to Tues solo assignment
 * add bootstrap theme to fruit assignment
 
+##DAY FOUR
+REST is a standard way we talk to servers.
+- connection between server and client.
+- node.js: traditionally servers are different developers than client side. Trend towards full-stack.
+
+Common actions:
+- Get: retrieves information from a server
+- post: creates resources
+- put: modify existing file
+- delete: qed
+
+For now: articficially creating communication lines with servers
+
+AJAX : asynchronous javascript and xml;
+- JSON
+- asynchronous: not waiting for something to do what we are doing. Non-sequential
+- AJAX: you have to send the request first. Initial request, request comes back
+- Grab additional information: traditionally, nav to another page
+	* AJAX allows us to make micro-requests to the website.
+- Can use AJAX to load information not previously loaded into the page
+	* Twitter gives a live update of incoming tweets without refreshing page
+- Request and response - each has a standard anatomy based on REST standardization. These are also very frequent vocab when dealing with node.
+	* Request:
+	* Response:
+- jQuery makes it easier for us to use AJAX, but AJAX is not a jQuery function.
+- .ajax:.get :: .on:.click

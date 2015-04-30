@@ -1,0 +1,8 @@
+{
+  "locations" : [
+    {"location": "Tokyo" },
+    {"location": "New York"},
+    {"location": "Minneapolis"},
+    {"location": "St. Paul"}
+  ]
+}
