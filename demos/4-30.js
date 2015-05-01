@@ -28,6 +28,5 @@ $(document).ready(function () {
             $(this).parent().append(cityData.locations[0].location);
         })
 
-
     });
 });

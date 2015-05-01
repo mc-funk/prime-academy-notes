@@ -180,3 +180,206 @@ AJAX : asynchronous javascript and xml;
 	* Response:
 - jQuery makes it easier for us to use AJAX, but AJAX is not a jQuery function.
 - .ajax:.get :: .on:.click
+
+[/demos/4-30.html](/demos/4-30.html)
+[/demos/4-30.js](/demos/4-30.js)
+[/demos/4-30.css](/demos/4-30.css)
+[/demos/data.json](/demos/data.json)
+[/demos/location.html](/demos/location.html)
+
+##DAY FIVE
+###AJAX morning lecture
+
+jQuery commands that use AJAX
+```javascript
+$.get //get some resource: url, file
+$.getScript //.get but specifies return value: script
+$.getJSON //.get but specifies return value: JSON
+$.post //put something somewhere
+$.load //
+```
+JSON is a human-readable format for JavaScript objects.
+JSONP: 
+* Way to perform cross-domain requests by exploiting something that browsers do
+* Only works with get, or AJAX specifying get
+* Returns JSON but with extra helpers (padding) around it to help it load correctly.
+* Typically only do this when you know that what you're requesting won't be compromised. 
+
+
+```JavaScript
+//Example 1 - Cross Site Error
+$.ajax ({
+	type: 'GET',
+	dataType: 'json',
+	crossDomain: true,
+	url: 'http://www.giantbomb.com/api/search/?format=jsonp&resources=game&api_key=' + apikey +'&query=' + encodeURI(query)' //find how to construct url in api documentation. Often at a /api
+	complete: function(data) {
+		console.log('ajax complete');
+	},
+	success: function(data) {
+		searchCallback(data.results);
+	},
+	error: function() {
+		//something here, can get error code and figure out what's up
+	}
+});
+```
+
+Normal request to website: port 80
+Secure SSL: port 443
+
+Troubleshooting XMLHttpRequest cannot load ... in console log
+This happens when you make a request of one domain and get response back from the others -- many browsers will puke at this but using JSONP will fix it. 
+
+In jquery under headers tab in the Network tab of dev tools: 
+- error: Provisional headers are shown
+--User-Agent: Mozilla/5.0 ...
+--then what the server sent back to you 
+--status: 304 <-- you can google this to find out what it means
+ * 500s are errors, server crashed...
+ * 400 not found (Wrong url?)
+ * 300 redirect 
+
+```JavaScript
+//Example 2: Using JSONP
+$.ajax ({
+	type: 'GET',
+	dataType: 'jsonp',
+	crossDomain: true,
+	jsonp: 'json_callback', //this is saying you allow what comes back to run a function and execute some code. 
+	url: 'http://www.giantbomb.com/api/search/?format=jsonp&resources=game&api_key=' + apikey +'&query=' + encodeURI(query)' //find how to construct url in api documentation. Often at a /api
+	complete: function(data) {
+		console.log('ajax complete');
+	},
+	success: function(data) {
+		searchCallback(data.results);
+	},
+	error: function() {
+		//something here, can get error code and figure out what's up
+	}
+});
+```
+JSONP is supported by all modern browsers
+
+http:, https: //protocol
+www. //subDomain
+someurl. //domain
+login.html //resource
+?go=home.html //query string 
+
+Run #2: Using JSONP
+* Chrome extension: postman-REST client
+	* 
+
+```JavaScript
+//Example 3, using CORS (cross-origin resource sharing)
+//Some older browsers don't allow this
+$.ajax ({
+	type: 'GET',
+	url: "http://updates.html5rocks.com", //this is just requesting the url, not an API. Some firewalls block this.
+	crossDomain: true,
+	dataType: 'text',
+	complete: function(data) {
+		console.log('ajax complete');
+	},
+	success: function(response) { //you can call this parameter whatever you want
+		searchCallback(data.results);
+	},
+	error: function(xhr, status) {
+		//something here, can get error code and figure out what's up
+	}
+});
+```
+Response Headers
+Access-Control-Allow-Origin: * <--this header being missing might show up in a previous error 
+
+XHR: XMLHttpRequest is ... the transfer protocol of the request. The $.ajax function communicates over XHR. 
+
+```JavaScript
+//Example 4: using core $.ajax() method
+$.ajax ({
+	//url for request
+	url: "example.php",
+	
+	//data to send (will be converted to a query string)
+	data: {
+		id: 123
+	},
+	
+	// Whether this is a POST or GET request
+	type: 'GET', //method is an alias for type
+	
+
+	//Data type we expect back
+	dataType: "json",
+
+	// Code to run if request succeeds; response is passed to the function
+	success: function(results) { //you can call this parameter whatever you want
+		searchCallback(data.results);
+	},
+
+	//Code to run if request fails
+	error: function (xhr, status, errorThrown) {
+	//something here, can get error code and figure out what's up
+	}
+
+	//code to run on complete, regardless of success/failure
+	complete: function(data) { //can have multiple functions here, will run in order
+		console.log('ajax complete');
+	},
+});
+```
+
+//Example 5: Using jQuery's Ajax convenience methods
+$.ajax ({
+	// Get plain text or HTML
+	$.get("/users.php", { //can also request data using ?querystring
+		userID: 1234
+	}, function(resp) {
+		console.log(resp); //server response
+	});
+	// Add a script to the page, then run a cuntion defined in it
+	$.getScript("/static/js/myScript.js", function() {
+		functionFromMyScript();
+	});
+	// Get JSON-formatted data from the server
+	$.getJSON( "/details.php", function (resp) {
+		//log each key in the response data
+		$.each( resp, function( key, value ) {
+			console.log(key + " : " + value);
+		});
+	});
+});
+```
+"RESTful application" - look this up - pass only desired data, not all of it 
+OData: still REST, just new ways to operate with the data 
+fiddler listens to all your traffic
+
+The XHR (XMLHttpRequest) transfer protocol can be used to make requests of web resources from within a script. 
+
+```HTML
+<div class="container">
+	<div class="row">
+		<a class="kittenLink" href="#" target="_blank"><h1 class="kittens"></h1></a>
+		//you have to put something in an href, otherwise click behav won't work
+		<p class="kittenDescription"></p>
+		<img class="kittenImage"></div>
+	</div>
+</div>
+```
+
+```javascript
+var kitteh = {
+	url: "http://placekitten.com/320/210",
+	description: "Click here to look at a kitten",
+	title: "Mweozzaaa",
+	imgSrc: "http://placekitten.com/320/210"
+};
+
+$(document).ready(function() {
+	$('.kittenLink').attr("href", kitteh.url);
+	$('.kittens').text()
+	$('.kittenDescription').text(kitteh.title);
+	$('.kittenImage').attr("src", kitteh.imgSrc);
+})
+```
