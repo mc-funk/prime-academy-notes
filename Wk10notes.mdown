@@ -1,0 +1,75 @@
+#WEEK 10 NOTES
+##DAY 2
+Reddis? 
+End of week: twitter or chat application
+MySQL, others? 
+
+1 week of angular - MVC frameworks
+
+##
+Node - scalable network apps using JS on the server side 
+* Write a code service that is non-blocking 
+* things can happen while requests is being sent out 
+* Built in C, v8 runtime (same as Chrome)
+
+###Event loop
+When event happens, it enters into the queue of events to  handle. 
+
+It doesn't necessarily execute at the same time, but it does queue them up and handle them in order. 
+
+Asynchronous: AJAX example
+```javascript
+ajax.get(
+	success: function() {
+
+	});
+```
+Fires off request, then executes rest of code regardless of whether response received. Doesn't wait for response to come back. 
+
+Non-blocking code: ?
+
+##DAY 3
+npm install will go through packages.json and install all dependencies
+
+Procfile: specific to heroku. 
+If you specify a start command in package.json, Heroku says it'll be OK but in scott's experience always create a Procfile. 
+```
+web: node app.js
+```
+Tells heroku the entry point of the app 
+//Fits' law, humans interact with physical interface 
+//Bad design option function F12!
+
+###Public and private methods
+if Message is a function that exists 
+made public: by exporting
+
+However, there can be functions inside the module that we don't export. Privately scoped property of module.
+
+AugA ==> random number
+AugB ==> convert AugA to dollars
+RetA ==> Return random dollar amt
+
+###Afternoon lecture
+[pluralsight](www.pluralsight.com)
+[digital-tutors.com](www.digital-tutors.com)
+
+```
+module.exports.hello = hello;
+```
+##DAY 4
+###Morning lecture: sending files back from the server
+io.js -- could replace Node at some point; take note
+
+[demos/express_fileserve_lecture](demos/express_fileserve_lecture)
+Public folder: 
+- Assets
+	- Scripts
+	- Stylesheets
+- Views [sometimes can be within assets]
+	- HTML
+	- Templates
+- Vendor 
+	- Assets we did not create: Angular, BS, jQ, etc. 
+
+

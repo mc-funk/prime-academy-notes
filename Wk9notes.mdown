@@ -288,7 +288,7 @@ $.ajax ({
 	error: function(xhr, status) {
 		//something here, can get error code and figure out what's up
 	}
-});
+});ƒ
 ```
 Response Headers
 Access-Control-Allow-Origin: * <--this header being missing might show up in a previous error 
